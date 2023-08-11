@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Josefin+Sans:ital@1&family=Kablammo&family=Lilita+One&family=Lora&family=Open+Sans:wght@300;700&family=Poppins:wght@400;700&family=Rubik&family=Tilt+Prism&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="con">
+    <div class="main">
+        
+        <div class="info">
+            <!-- <table border="2">
+                <tr>
+                    <td>
+                        Name</td>
+                    <td>kunwar pal </td>
+                </tr>
+                <tr>
+                    <td>
+                        Internship</td>
+                    <td>web</td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>dkfhsldnlmms</td>
+                </tr>
+            </table> -->
+            {% if person_info %}
+            <div class="heading">
+                <h1>This Certificate Is Verified ✅</h1>
+                <h3>The candidate has successfully completed a one-month virtual internship with <span>Edupractix</span></h3>
+            </div>
+                <pre><span>Name</span>                              {{ person_info['Name'] }}</pre>
+                <pre><span>Name</span>                              {{ person_info['Age'] }}</pre>
+                <pre><span>Name</span>                              kunwar</pre>
+            {% else %}
+            <div class="heading">
+                <h1>This Certificate Is Not Verified</h1>
+            </div>
+                <p>No information available for this person.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+
+.con {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: fit-content;
+    min-width: 80%; /* Adjust as needed */
+    max-width: 90%; /* Adjust as needed */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    margin: 10px; /* Add some margin to the sides */
+}
+
+.heading {
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    line-height: 40px;
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    font-weight: 700;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.25rem; /* Adjust font size for smaller screens */
+    font-weight: 700;
+}
+.pre{
+    text-align: end;
+}
+
+.info>pre {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-weight: 500;
+    border: 1px solid black;
+    padding: 5px 10px;
+    overflow-x: auto; /* Add horizontal scrolling for small screens */
+}
+
+.info>pre>span {
+    font-weight: 700;
+}
+
+/* Media Queries */
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+    .main {
+        border-radius: 20px;
+        padding: 10px;
+        min-width: 95%;
+        margin: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .info>pre {
+        font-size: 0.875rem;
+    }
+}
+    
